@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>iSlider</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<section class="wrap">
+		<div class="item first">HI</div>
+		<div class="item second">HI</div>
+		<div class="item third">HI</div>
+	</section>
+	<footer></footer>
+<script src="js/islider.js"></script>
+<script type="text/javascript">
+	new iSlider({
+        wrap:'.wrap',
+        item:'.item',
+        playClass:'play',
+        isVertical:true,
+        fullScr:true,
+        speed:400,
+        onslide:function (index) {
+            console.log(index);
+        }
+    });
+</script>
+</body>
+</html>
