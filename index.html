@@ -5,9 +5,16 @@
 </head>
 <body>
 	<section class="wrap">
-		<div class="item first">HI</div>
-		<div class="item second">HI</div>
-		<div class="item third">HI</div>
+		<div id="first" class="item">
+            <div class="three-pillars">
+                <div class="flash">
+                    <div class="squre left-right"></div>
+                </div>
+                <img src="images/three-pillars-1.png" />
+            </div>
+        </div>
+		<div id="second" class="item">HI</div>
+		<div id="third" class="item">HI</div>
 	</section>
 	<footer></footer>
 <script src="js/islider.js"></script>
@@ -20,14 +27,14 @@
         fullScr:true,
         speed:400,
         onslide:function (index) {
-            switch(index){
-                case 0: console.log(0);
-                        alert(index);
-                        break;
-                case 1: console.log(0);
-                        alert(index);
-                        break;
-            }
+            // switch(index){
+            //     case 0: console.log(0);
+            //             alert(index);
+            //             break;
+            //     case 1: console.log(0);
+            //             alert(index);
+            //             break;
+            // }
         }
     });
 </script>

@@ -55,6 +55,40 @@ footer {
 
 .item {
   padding-top: 40px;
-  background-color: #f4f4f4; }
-
+  background-color: #f4f4f4;
+}
+.three-pillars {
+  width:300px;
+  margin:0 auto;
+  position:relative;
+}
+.three-pillars img {
+  max-width:100%;
+}
+.squre {
+  width:5px;
+  height:5px;
+  position: absolute;
+  background-color: red;
+}
+@keyframes flash{
+  0%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 0.5;
+  }
+  50%{
+    opacity: 0;
+  }
+  75%{
+    opacity:0.5; 
+  }
+  100%{
+    opacity: 1;
+  }
+}
+/*.flash {
+  animation: flash 1s linear infinite;
+}*/
 /*# sourceMappingURL=style.css.map */
