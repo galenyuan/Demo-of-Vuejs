@@ -11,37 +11,41 @@
 <body>
 	<section id="wrap" class="wrap">
 		<div id="first" class="item">
-            <div class="container">
-                <h1 class="title">Innocellence</h1>
-                <h3 class="text">Innovation meets excellence</h3>
-                <div class="arrow-left">
-                    <p>
-                        <i class="fa fa-caret-left swip-left"></i>
-                        <i class="fa fa-caret-left swip-left"></i>
-                        <i class="fa fa-caret-left swip-left"></i>
-                        <i class="fa fa-caret-left swip-left"></i>
-                        <i class="fa fa-caret-left swip-left"></i>
-                        <i class="fa fa-caret-left swip-left"></i>
-                    </p>
+            <div class="flex-box">
+                <div class="container">
+                    <h1 class="title">Innocellence</h1>
+                    <h3 class="text">Innovation meets excellence</h3>
+                    <div class="arrow-left">
+                        <p>
+                            <i class="fa fa-caret-left swip-left"></i>
+                            <i class="fa fa-caret-left swip-left"></i>
+                            <i class="fa fa-caret-left swip-left"></i>
+                            <i class="fa fa-caret-left swip-left"></i>
+                            <i class="fa fa-caret-left swip-left"></i>
+                            <i class="fa fa-caret-left swip-left"></i>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 		<div id="second" class="item">
-            <div class="container">
-                <div class="what-we-do">
-                    <div id="html5" class="skill">
-                        <img src="images/HTML5_Logo.svg">
+            <div class="flex-box">
+                <div class="container">
+                    <div class="what-we-do">
+                        <div id="html5" class="skill">
+                            <img src="images/HTML5_Logo.svg">
+                        </div>
+                        <div id="android" class="skill">
+                            <img src="images/Android_robot.svg">
+                        </div>
+                        <div id="ios" class="skill">
+                            <img src="images/Apple-logo.png">
+                        </div>
+                        <div id="net" class="skill">
+                            <img src="images/netlogo.png">
+                        </div>
+                        <div class="cover-border"></div>
                     </div>
-                    <div id="android" class="skill">
-                        <img src="images/Android_robot.svg">
-                    </div>
-                    <div id="ios" class="skill">
-                        <img src="images/Apple-logo.png">
-                    </div>
-                    <div id="net" class="skill">
-                        <img src="images/netlogo.png">
-                    </div>
-                    <div class="cover-border"></div>
                 </div>
             </div>
         </div>
@@ -70,7 +74,6 @@
         speed:400,
         onslide:function (index) {
             var elem = $(".logo");
-            console.log(elem);
             var a = index + 1;
             elem.attr("class","");
             elem.addClass("logo");

@@ -205,7 +205,7 @@ body {
 }
 
 .title {
-  margin-top:20px;
+  margin-top: -120px;
   -webkit-transition:all 0.5s;
   transition:all 0.5s;
   color:white;
@@ -246,7 +246,15 @@ body {
 
 .item {
   text-align: center;
-  display: -webkit-box !important;
+}
+.flex-box {
+  height:100%;
+  position:relative;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  box-align: center;
+  -webkit-box-pack: center;
+  box-pack: center;
 }
 
 /*First side*/
@@ -302,9 +310,9 @@ body {
 /*Second slide*/
 
 #second .what-we-do {
-  margin:150px auto;
+  margin:150px auto 0 auto;
   height:300px;
-  width:100%;
+  width:320px;
   -webkit-transform: translate(0,-50%);
   transform: translate(0,-50%);
 }
