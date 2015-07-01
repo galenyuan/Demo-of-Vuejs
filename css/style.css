@@ -47,6 +47,22 @@ table {
 /* Reset.css END */
 
 /* Animations */
+@-webkit-keyframes cloudmove {
+  0%{
+    left:-50px;
+  }
+  100%{ 
+    left:320px;
+  }
+}
+@keyframes cloudmove {
+  0%{
+    left:-50px;
+  }
+  100%{ 
+    left:320px;
+  }
+}
 @-webkit-keyframes flip {
   0% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
@@ -135,16 +151,6 @@ keyframes flip {
   75%{ opacity:0.5; }
   100%{ opacity: 1; }
 }
-@-webkit-keyframes cloudmove{
-  to{ 
-      left:100%;
-    }
-}
-@keyframes cloudmove{
-  to{ 
-    left:100%;
-  }
-}
 
 /* Animation END */
 
@@ -167,9 +173,8 @@ body {
 .clouds {
   position:absolute;
   color:white;
-  display:block;
   left:-50px;
-  z-index:-99;
+  z-index:-1;
 }
 .clouds.first {
   top:10px;
