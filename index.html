@@ -11,21 +11,39 @@
 <body>
 	<section id="wrap" class="wrap">
 		<div id="first" class="item">
-            <h1 class="title">Innocellence</h1>
-            <h3 class="text">Innovation meets excellence</h3>
-            <div class="arrow-left">
-                <p>
-                    <i class="fa fa-caret-left swip-left"></i>
-                    <i class="fa fa-caret-left swip-left"></i>
-                    <i class="fa fa-caret-left swip-left"></i>
-                    <i class="fa fa-caret-left swip-left"></i>
-                    <i class="fa fa-caret-left swip-left"></i>
-                    <i class="fa fa-caret-left swip-left"></i>
-                </p>
+            <div class="container">
+                <h1 class="title">Innocellence</h1>
+                <h3 class="text">Innovation meets excellence</h3>
+                <div class="arrow-left">
+                    <p>
+                        <i class="fa fa-caret-left swip-left"></i>
+                        <i class="fa fa-caret-left swip-left"></i>
+                        <i class="fa fa-caret-left swip-left"></i>
+                        <i class="fa fa-caret-left swip-left"></i>
+                        <i class="fa fa-caret-left swip-left"></i>
+                        <i class="fa fa-caret-left swip-left"></i>
+                    </p>
+                </div>
             </div>
         </div>
 		<div id="second" class="item">
-            <h1 class="title">Innocellence</h1>
+            <div class="container">
+                <div class="what-we-do">
+                    <div id="html5" class="skill">
+                        <img src="images/HTML5_Logo.svg">
+                    </div>
+                    <div id="android" class="skill">
+                        <img src="images/Android_robot.svg">
+                    </div>
+                    <div id="ios" class="skill">
+                        <img src="images/Apple-logo.png">
+                    </div>
+                    <div id="net" class="skill">
+                        <img src="images/netlogo.png">
+                    </div>
+                    <div class="cover-border"></div>
+                </div>
+            </div>
         </div>
         <div id="third" class="item">
             <h1 class="title">Innocellence</h1>
@@ -51,13 +69,12 @@
         fullScr:true,
         speed:400,
         onslide:function (index) {
-            $(".title").removeClass("show");
-            $(".text").removeClass("flipInX");
-            switch(index){
-                case 0: setTimeout('$("#first .title").addClass("show")',500);
-                        setTimeout('$("#first .text").addClass("flipInX")',800);
-                        break;
-            }
+            var elem = $(".logo");
+            console.log(elem);
+            var a = index + 1;
+            elem.attr("class","");
+            elem.addClass("logo");
+            elem.addClass("step-"+a+"");
         }
     });
 </script>
