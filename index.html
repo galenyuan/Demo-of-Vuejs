@@ -1,40 +1,63 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>iSlider</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable = no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<section class="wrap">
+	<section id="wrap" class="wrap">
 		<div id="first" class="item">
-            <div class="three-pillars">
-                <div class="flash">
-                    <div class="squre left-right"></div>
-                </div>
-                <img src="images/three-pillars-1.png" />
+            <h1 class="title">Innocellence</h1>
+            <h3 class="text">Innovation meets excellence</h3>
+            <div class="arrow-left">
+                <p>
+                    <i class="fa fa-caret-left swip-left"></i>
+                    <i class="fa fa-caret-left swip-left"></i>
+                    <i class="fa fa-caret-left swip-left"></i>
+                    <i class="fa fa-caret-left swip-left"></i>
+                    <i class="fa fa-caret-left swip-left"></i>
+                    <i class="fa fa-caret-left swip-left"></i>
+                </p>
             </div>
         </div>
-		<div id="second" class="item">HI</div>
-		<div id="third" class="item">HI</div>
+		<div id="second" class="item">
+            <h1 class="title">Innocellence</h1>
+        </div>
+        <div id="third" class="item">
+            <h1 class="title">Innocellence</h1>
+        </div>
 	</section>
-	<footer></footer>
+    <div class="main_bg">
+        <i class="clouds first fa fa-soundcloud"></i>
+        <i class="clouds second fa fa-soundcloud"></i>
+        <i class="clouds third fa fa-soundcloud"></i>
+        <div class="logo">
+            <img src="images/InnoCellence_Logo.png" />
+        </div>
+    </div>
+    
 <script src="js/islider.js"></script>
+<script src="js/zepto.min.js"></script>
 <script type="text/javascript">
 	new iSlider({
-        wrap:'.wrap',
+        wrap:'#wrap',
         item:'.item',
         playClass:'play',
-        isVertical:true,
+        isVertical:false,
         fullScr:true,
         speed:400,
         onslide:function (index) {
-            // switch(index){
-            //     case 0: console.log(0);
-            //             alert(index);
-            //             break;
-            //     case 1: console.log(0);
-            //             alert(index);
-            //             break;
-            // }
+            $(".title").removeClass("show");
+            $(".text").removeClass("flipInX");
+            switch(index){
+                case 0: setTimeout('$("#first .title").addClass("show")',500);
+                        setTimeout('$("#first .text").addClass("flipInX")',800);
+                        break;
+            }
         }
     });
 </script>
