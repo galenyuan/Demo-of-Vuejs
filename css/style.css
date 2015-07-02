@@ -157,7 +157,7 @@ keyframes flip {
 body {
   font-family: Arial sans-serif;
   font-size:15px;
-  background: -webkit-linear-gradient(top, #87CEFA 0%, #b6e2fd 80% ,white 100%);
+  background: -webkit-linear-gradient(top, #87CEFA 0%, #b6e2fd 100%);
 }
 
 .main_bg {
@@ -273,16 +273,9 @@ body {
   width:100%;
 }
 
-.arrow-left {
-  margin-top:50px;
-  width:100%;
-  text-align:center;
-}
-
 .swip-left {
   -webkit-animation:flash 2s infinite;
   animation:flash 2s infinite;
-  color:white;
   padding-right:5px;
 }
 
@@ -310,7 +303,15 @@ body {
   -webkit-animation-delay:0.5s;
   animation-delay:0.3s;
 }
-
+.arrow-left {
+  margin:50px auto;
+  text-align:center;
+  font-size:20px;
+  color:white;
+}
+.more {
+  font-size:15px;
+}
 /*First slide END*/
 /*Second slide*/
 
