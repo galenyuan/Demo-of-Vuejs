@@ -160,6 +160,10 @@ body {
   background: -webkit-linear-gradient(top, #87CEFA 0%, #b6e2fd 100%);
 }
 
+.common {
+  height:100%;
+}
+
 .main_bg {
   z-index:-999;
   position:absolute;
@@ -201,8 +205,11 @@ body {
   -webkit-transition:all 1s;
   transition:all 1s;
   width:150px;
-  margin:0 auto;
-  bottom:30px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-top:-71px;
+  margin-left:-75px;
 }
 
 .logo img{
@@ -210,7 +217,6 @@ body {
 }
 
 .title {
-  margin-top: -120px;
   -webkit-transition:all 0.5s;
   transition:all 0.5s;
   color:white;
@@ -219,6 +225,7 @@ body {
   -webkit-transform:translate(0,-10px);
   transform:translate(0,-10px);
   display:block;
+  margin-bottom: 150px;
 }
 
 .play .title {
@@ -304,7 +311,7 @@ body {
   animation-delay:0.3s;
 }
 .arrow-left {
-  margin:50px auto;
+  margin:50px auto 0 0;
   text-align:center;
   font-size:20px;
   color:white;
@@ -314,13 +321,16 @@ body {
 }
 /*First slide END*/
 /*Second slide*/
+#second .title {
+  position:absolute;
+  top:-30px;
+  width:100%;
+  text-align: center;
+}
 
 #second .what-we-do {
-  margin:150px auto 0 auto;
   height:300px;
   width:320px;
-  -webkit-transform: translate(0,-50%);
-  transform: translate(0,-50%);
 }
 
 .cover-border {
@@ -347,46 +357,39 @@ body {
   transform: scale(1);
 }
 
-.step-2.logo {
-  -webkit-transition:all 1s;
-  transition:all 1s;
-  -webkit-transform:translate(0px,60px);
-  transform:translate(0px,60px);
-}
-
 #second .skill {
-  width:75px;
+  width:100%;
   position:absolute;
   z-index:1;
-  left: 124px;
-  top: 135px;
+  top: 50%;
+  margin-top: -45px;
   opacity: 0;
   -webkit-transition: all ease .7s 1.5s;
 }
 #second .skill img {
-  max-width:100%;
+  width:75px;
 }
 
 .play #html5 {
-  -webkit-transform: translate3d(0,-133px,0) scale(1,1);
+  -webkit-transform: translate3d(0,-98px,0) scale(1,1);
   opacity: 1;
   -webkit-transition-delay: 1.2s;
 }
 
 .play #net {
-  -webkit-transform: translate3d(117px,0,0) scale(1,1);
+  -webkit-transform: translate3d(117px,10px,0) scale(1,1);
   opacity: 1;
-  -webkit-transition-delay: 1.4s;
+  -webkit-transition-delay: 1.5s;
 }
 
 .play #ios {
-  -webkit-transform: translate3d(-117px,-15px,0) scale(1,1);
+  -webkit-transform: translate3d(-117px,-5px,0) scale(1,1);
   opacity: 1;
-  -webkit-transition-delay: 1.6s;  
+  -webkit-transition-delay: 1.8s;  
 }
 
 .play #android {
   -webkit-transform: translate3d(0,111px,0) scale(1,1);
   opacity: 1;
-  -webkit-transition-delay: 1.8s;
+  -webkit-transition-delay: 2.1s;
 }
