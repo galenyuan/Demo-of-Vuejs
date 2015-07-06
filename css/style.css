@@ -151,7 +151,26 @@ keyframes flip {
   75%{ opacity:0.5; }
   100%{ opacity: 1; }
 }
-
+@-webkit-keyframes turn-round {
+  0%{
+    -webkit-transform:rotate(0deg);
+    transform:rotate(0deg);
+  }
+  100%{ 
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg);;
+  }
+}
+@keyframes turn-round {
+  0%{
+    -webkit-transform:rotate(0deg);
+    transform:rotate(0deg);
+  }
+  100%{ 
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg);;
+  }
+}
 /* Animation END */
 
 body {
@@ -162,6 +181,11 @@ body {
 
 .common {
   height:100%;
+}
+
+.text-area {
+  padding-left:20px;
+  padding-right:20px;
 }
 
 .main_bg {
@@ -241,12 +265,6 @@ body {
   transition:all 1s;
   display:block;
 }
-.play .text {
-  -webkit-animation: flip 1s ;
-  animation: flip 1s;
-  -webkit-animation-delay:0.8s;
-  animation-delay:0.8s; 
-}
 
 .item .container {
   position: relative;
@@ -321,6 +339,10 @@ body {
 }
 /*First slide END*/
 /*Second slide*/
+.step-1.logo{
+  -webkit-transform:translate3d(0,-60px,0);
+  transform:translate3d(0,-60px,0);
+}
 #second .title {
   position:absolute;
   top:-30px;
@@ -331,6 +353,7 @@ body {
 #second .what-we-do {
   height:300px;
   width:320px;
+  margin:0 auto;
 }
 
 .cover-border {
@@ -358,38 +381,52 @@ body {
 }
 
 #second .skill {
-  width:100%;
+  width:65px;
+  display:block;
   position:absolute;
   z-index:1;
-  top: 50%;
-  margin-top: -45px;
   opacity: 0;
   -webkit-transition: all ease .7s 1.5s;
+  -webkit-transform: translate3d(127px,100px,0) scale(1);
+}
+#second .skill .cover {
+  width:65px;
+  height:65px;
+  margin-bottom:5px;
+  display:block;
+  border-radius: 999px;
+  background-color:white;
 }
 #second .skill img {
-  width:75px;
+  width:100%;
 }
 
-.play #html5 {
-  -webkit-transform: translate3d(0,-98px,0) scale(1,1);
+.play #service-1 {
+  -webkit-transform: translate3d(130px,-20px,0) scale(1,1);
   opacity: 1;
   -webkit-transition-delay: 1.2s;
 }
 
-.play #net {
-  -webkit-transform: translate3d(117px,10px,0) scale(1,1);
+.play #service-2 {
+  -webkit-transform: translate3d(177px,197px,0) scale(1,1);  
   opacity: 1;
-  -webkit-transition-delay: 1.5s;
+  -webkit-transition-delay: 1.6s;
 }
 
-.play #ios {
-  -webkit-transform: translate3d(-117px,-5px,0) scale(1,1);
+.play #service-3 {
+  -webkit-transform: translate3d(9px,63px,0) scale(1,1);
   opacity: 1;
-  -webkit-transition-delay: 1.8s;  
+  -webkit-transition-delay: 2.0s;  
 }
 
-.play #android {
-  -webkit-transform: translate3d(0,111px,0) scale(1,1);
+.play #service-4 {
+  -webkit-transform: translate3d(244px,63px,0) scale(1,1);  
   opacity: 1;
-  -webkit-transition-delay: 2.1s;
+  
+  -webkit-transition-delay: 1.4s;
+}
+.play #service-5 {
+  -webkit-transform: translate3d(65px,197px,0) scale(1,1);
+  opacity: 1; 
+  -webkit-transition-delay: 1.8s;
 }
