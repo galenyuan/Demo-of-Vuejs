@@ -47,6 +47,11 @@ table {
 /* Reset.css END */
 
 /* Animations */
+@-webkit-keyframes require-in{
+  to{
+    left:0;
+  }
+}
 @-webkit-keyframes cloudmove {
   0%{
     left:-50px;
@@ -158,7 +163,7 @@ keyframes flip {
   }
   100%{ 
     -webkit-transform:rotate(360deg);
-    transform:rotate(360deg);;
+    transform:rotate(360deg);
   }
 }
 @keyframes turn-round {
@@ -170,6 +175,13 @@ keyframes flip {
     -webkit-transform:rotate(360deg);
     transform:rotate(360deg);;
   }
+}
+@keyframes flash{
+  0%{ opacity: 1; }
+  25%{ opacity: 0.5; }
+  50%{ opacity: 0; }
+  75%{ opacity:0.5; }
+  100%{ opacity: 1; }
 }
 /* Animation END */
 
@@ -234,6 +246,8 @@ body {
   left:50%;
   margin-top:-71px;
   margin-left:-75px;
+  -webkit-transform:rotate(0deg) scale(1,1);
+  transform:rotate(0deg) scale(1,1);
 }
 
 .logo img{
@@ -429,4 +443,59 @@ body {
   -webkit-transform: translate3d(65px,197px,0) scale(1,1);
   opacity: 1; 
   -webkit-transition-delay: 1.8s;
+}
+/*Third Slide Start*/
+.step-3.logo {
+  -webkit-transition:all ease 2s;
+  transition:all ease 2s;
+  opacity: 0;
+  -webkit-transform:rotate(720deg) scale(0);
+  transform:rotate(720deg) scale(0);
+}
+#third .title {
+  margin-bottom:10px;
+}
+#third article {
+  margin-bottom:10px;
+}
+.require-item {
+  opacity: 0;
+  -webkit-transition:left ease 1s;
+  transition:left ease 1s;
+  position:relative;
+  padding:10px;
+  margin-bottom:8px;
+  text-align:left;
+  color:white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.require-item:nth-child(1){
+  -webkit-transition:left ease 1s;
+  transition:left ease 1s;
+  background-color:#D32F2F;
+  width:180px;
+  left:-180px;
+}
+.require-item:nth-child(2){
+  -webkit-transition:left ease 1s;
+  transition:left ease 1s;
+  -webkit-transition-delay:0.2s;
+  transition-delay:0.2s;
+  background-color:#F44336;
+  width:240px;
+  left:-240px;
+}
+.require-item:nth-child(3){
+  -webkit-transition:left ease 1s;
+  transition:left ease 1s;
+  -webkit-transition-delay:0.4s;
+  transition-delay:0.4s;
+  background-color:#FF5252;
+  width:300px;
+  left:-300px;
+}
+.play .require-item{
+  left:0;
+  opacity: 1;
 }
