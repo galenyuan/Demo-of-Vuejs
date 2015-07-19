@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>iSlider</title>
+	<title>英诺瑞新(大连)招贤纳士</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable = no"/>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css?123">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <div id="wx_logo" style='display:none;'>
+        <img src='images/wx-pic.png' />
+    </div>
 	<section id="wrap" class="wrap">
 		<div id="first" class="item">
             <div class="flex-box">
@@ -20,8 +23,7 @@
                             我们是 InnoCellence, 领先的数字创新者
                         </h1>
                         <p>
-                            我们发掘推动客户的业务发展的理念，我们将具有美好前景的概念变为有价值的直观解决方案。另外，我们还打造长期的合作伙伴关系以确保客户可以利用新兴的数字创新。<br />
-                            我们拥有掌握多个领域的专业技能的世界一流的专业人士，并与世界上最成功、最具洞察力的全球公司进行合作。
+                            英诺瑞新是一家快速成长的创新型软件开发公司。公司致力于为财富500强企业提供创新顾问服务，移动解决方案和生命科学领域计算软件开发等专业服务。总部设在新加坡，并在新加坡和中国大连拥有开发中心。我们为锐意进取的人才提供加入我们专业而多元文化的团队的机会。英诺瑞新为你提供一个使用先进技术为全球最成功的创新公司服务的机会。
                         </p>
                     </div>
                     
@@ -81,24 +83,22 @@
         <div id="third" class="item">
             <div class="flex-box">
                 <div class="container">
-                    <h1 class="title">Innocellence</h1>
-                    <article class="text-area">
-                        <p>在Innocellence, 我们希望员工在拥有良好的专业技能的同时,还应该有这些能力:
-                        </p>
-                    </article>
-                    <div class="require-area">
-                        <div class="require-item">
-                            良好的英语听说能力,能与国外客户无障碍沟通最佳。
-                        </div>
-                        <div class="require-item">
-                            善于发现并独立解决问题的能力,善于使用搜索引擎(公司科学上网哦)。
-                        </div>
-                        <div class="require-item">
-                            喜欢研究新东西,我们的理念就是创新,欢迎喜欢创新的你与我们同同行。
-                        </div>
-                    </div>   
-                <div>
-            </div>
+                    <h1 class="title">热招职位</h1>
+                    <ul class="job-type">
+                        <li class="active">
+                            <a href="javascript:void(0)">技术类</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">市场类</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">管理类</a>
+                        </li>
+                        <div class="clear-fixed"></div>
+                    </ul>
+                    <ul class="job-list">
+                    </ul> 
+                </div>
         </div>
 	</section>
     <section class="common">
@@ -111,10 +111,17 @@
             </div>
         </div>
     </section>
-    
+    <div class="job-detail">
+        <a id="close" class="fa fa-times" href="#close"></a>
+        <h3 class="job-name"></h3>
+        <ul class="job-description">
+        </ul>
+    </div>
+    <div class="shadow"></div>
     
 <script src="js/islider.js"></script>
 <script src="js/zepto.min.js"></script>
+<script src="js/function.js"></script>
 <script type="text/javascript">
 	new iSlider({
         wrap:'#wrap',
@@ -129,6 +136,17 @@
             elem.attr("class","");
             elem.addClass("logo");
             elem.addClass("step-"+a+"");
+            if(index==2){
+                job("技术类");
+                $(".job-type li a").click(function(){
+                    event.preventDefault();
+                    var type = $(this).text();
+                    $(".job-type li").removeClass("active");
+                    var parent = $(this).parent();
+                    $(parent).addClass("active");
+                    job(type);
+                });
+            }
         }
     });
 </script>
