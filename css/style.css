@@ -532,12 +532,18 @@ body {
 }
 .job-description {
   padding-left:5px;
+  border-bottom: 1px #f8f8f8 solid;
 }
 .job-description li{
   list-style: none;
   margin-bottom:10px;
 }
+.job-footer {
+  padding-top:5px;
+  text-align: center;
+}
 #close {
+  color:black;
   position:absolute;
   top:8px;
   right:20px;

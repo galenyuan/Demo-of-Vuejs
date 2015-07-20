@@ -50,7 +50,7 @@ var jobs ={
 		"Fluent in reading/writing/speaking both English and Chinese."
 		]
 	}
-}
+};
 function job(type){
 	var list = jobs[type];
 	var html = '';
@@ -67,7 +67,6 @@ function jobDetail(type,jobname){
 		var a = i + 1;
 		html+='<li>'+a+'. '+description[i]+'</li>'
 	}
-	html+='<li><b>Please send your CV and cover letter to: dalian_hr@innocellence.com</b></li>';
 	$(".job-detail .job-name").text(jobname);
 	$(".job-description").html(html);
 	$(".shadow").show();

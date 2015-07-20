@@ -85,7 +85,7 @@
                 <div class="container">
                     <h1 class="title">热招职位</h1>
                     <ul class="job-type">
-                        <li class="active">
+                        <li>
                             <a href="javascript:void(0)">技术类</a>
                         </li>
                         <li>
@@ -116,6 +116,9 @@
         <h3 class="job-name"></h3>
         <ul class="job-description">
         </ul>
+        <div class="job-footer">
+            <b>Please send your CV and cover letter to: dalian_hr@innocellence.com</b>
+        </div>
     </div>
     <div class="shadow"></div>
     
@@ -138,6 +141,8 @@
             elem.addClass("step-"+a+"");
             if(index==2){
                 job("技术类");
+                $(".job-type li").removeClass("active");
+                $(".job-type li").eq(0).addClass("active");
                 $(".job-type li a").click(function(){
                     event.preventDefault();
                     var type = $(this).text();
