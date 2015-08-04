@@ -1,159 +1,91 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title>英诺瑞新(大连)招贤纳士</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable = no"/>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Vue Demo</title>
+	<style type="text/css">
+	.content {
+		width:60%;
+		margin:0 auto;
+    margin-bottom:20px;
+	}
+	.content .item{
+		width:20%;
+		float:left;
+	}
+	</style>
 </head>
 <body>
-    <div id="wx_logo" style='display:none;'>
-        <img src='images/wx-pic.png' />
+<form id="demo">
+  <div class="content" v-repeat="formData">
+    <div class="item">
+      <input type="text" v-model="msg">
     </div>
-	<section id="wrap" class="wrap">
-		<div id="first" class="item">
-            <div class="flex-box">
-                <div class="container">
-                    <div class="text-area">
-                        <h1 class="title">
-                            我们是 InnoCellence, 领先的数字创新者
-                        </h1>
-                        <p>
-                            英诺瑞新是一家快速成长的创新型软件开发公司。公司致力于为财富500强企业提供创新顾问服务，移动解决方案和生命科学领域计算软件开发等专业服务。总部设在新加坡，并在新加坡和中国大连拥有开发中心。我们为锐意进取的人才提供加入我们专业而多元文化的团队的机会。英诺瑞新为你提供一个使用先进技术为全球最成功的创新公司服务的机会。
-                        </p>
-                    </div>
-                    
-                    <div class="arrow-left">
-                        <p>
-                            <i class="fa fa-angle-left swip-left"></i>
-                            <i class="fa fa-angle-left swip-left"></i>
-                            <i class="fa fa-angle-left swip-left"></i>
-                            <i class="fa fa-angle-left swip-left"></i>
-                            <i class="fa fa-angle-left swip-left"></i>
-                            <i class="fa fa-angle-left swip-left"></i>
-                        </p>
-                        <p class="more">滑动查看更多</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-		<div id="second" class="item">
-            <div class="flex-box">
-                <div class="container">
-                    <h1 class="title">What We Do?</h1>
-                    <div class="what-we-do">
-                        <a id="service-1" class="skill">
-                            <span class="cover">
-                                <img src="images/service/service-icons-1.png">
-                            </span>
-                            <p>创新咨询</p>   
-                        </a>
-                        <a id="service-2" class="skill">
-                            <span class="cover">
-                                <img src="images/service/service-icons-2.png">
-                            </span>
-                            <p>全面的服务移动性解决方案</p>
-                        </a>
-                        <a id="service-3" class="skill">
-                            <span class="cover">
-                                <img src="images/service/service-icons-3.png">
-                            </span>
-                            <p>用户体验设计</p>
-                        </a>
-                        <a id="service-4" class="skill">
-                            <span class="cover">
-                                <img src="images/service/service-icons-4.png">
-                            </span>
-                            <p>企业应用程序</p>
-                        </a>
-                        <a id="service-5" class="skill">
-                            <span class="cover">
-                                <img src="images/service/service-icons-5.png">
-                            </span>
-                            <p>创新实验室开发和托管</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="third" class="item">
-            <div class="flex-box">
-                <div class="container">
-                    <h1 class="title">热招职位</h1>
-                    <ul class="job-type">
-                        <li>
-                            <a href="javascript:void(0)">技术类</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">市场类</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">管理类</a>
-                        </li>
-                        <div class="clear-fixed"></div>
-                    </ul>
-                    <ul class="job-list">
-                    </ul> 
-                </div>
-        </div>
-	</section>
-    <section class="common">
-        <div class="main_bg">
-            <i class="clouds first fa fa-soundcloud"></i>
-            <i class="clouds second fa fa-soundcloud"></i>
-            <i class="clouds third fa fa-soundcloud"></i>
-            <div class="logo">
-                <img src="images/InnoCellence_Logo.png" />
-            </div>
-        </div>
-    </section>
-    <div class="job-detail">
-        <a id="close" class="fa fa-times" href="#close"></a>
-        <h3 class="job-name"></h3>
-        <ul class="job-description">
-        </ul>
-        <div class="job-footer">
-            <b>Please send your CV and cover letter to: dalian_hr@innocellence.com</b>
-        </div>
+    <div class="item">
+      <input type="checkbox" v-model="checked">
     </div>
-    <div class="shadow"></div>
-    
-<script src="js/islider.js"></script>
-<script src="js/zepto.min.js"></script>
-<script src="js/function.js"></script>
+    <div class="item">
+      <select v-model="selected">
+        <option>one</option>
+        <option>two</option>
+      </select>
+      </div>
+    <div class="item">
+      <select v-model="multiSelect" multiple>
+        <option>one</option>
+        <option>two</option>
+        <option>three</option>
+      </select>
+    </div>
+    <div class="item">
+      <button type="button" v-on="click:remove(this)">X</button>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+  <center><button v-on="click:onClick">Add One</button></center>
+  <center><button type="button" v-on="click:submit()">Submit</button></center>
+  <div><pre>data: {{$data | json 2}}</pre></div>
+</form>
+
+<script src="js/vue.min.js"></script>
 <script type="text/javascript">
-	new iSlider({
-        wrap:'#wrap',
-        item:'.item',
-        playClass:'play',
-        isVertical:false,
-        fullScr:true,
-        speed:400,
-        onslide:function (index) {
-            var elem = $(".logo");
-            var a = index + 1;
-            elem.attr("class","");
-            elem.addClass("logo");
-            elem.addClass("step-"+a+"");
-            if(index==2){
-                job("技术类");
-                $(".job-type li").removeClass("active");
-                $(".job-type li").eq(0).addClass("active");
-                $(".job-type li a").click(function(){
-                    event.preventDefault();
-                    var type = $(this).text();
-                    $(".job-type li").removeClass("active");
-                    var parent = $(this).parent();
-                    $(parent).addClass("active");
-                    job(type);
-                });
-            }
-        }
-    });
+var selectURL = 'http://10.0.0.141/vue-demo/data.php';
+var request = new XMLHttpRequest();
+var data;
+request.open("GET","data.php?t=" + Math.random() + "",true);
+request.send();
+request.onload = function(){
+  data = JSON.parse(request.responseText);
+  vue();
+};
+function vue(){
+  var demo = new Vue({
+  el: '#demo',
+  data: {
+    name: "demo",
+    formData: data
+  },
+  methods: {
+      onClick:function(e){
+        e.preventDefault();
+        console.log(this);
+        this.formData.push({
+            msg: "",
+            checked: "",
+            picked: "",
+            selected : "",
+            multiSelect: ""
+        })
+      },
+      remove:function(e){
+        this.formData.$remove(e.$data)
+      },
+      submit:function(){
+        var result = JSON.stringify(demo.$data.formData);
+        alert(result);
+      }
+    }      
+  });
+}
+
 </script>
 </body>
 </html>
