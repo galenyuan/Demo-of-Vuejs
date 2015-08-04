@@ -1,6 +1,6 @@
 <?php
-	$dsn = "mysql:host=localhost;dbname=vuejs";
-	$db = new PDO($dsn,'root','');
+	$dsn = "mysql:host=host;dbname=dbname";
+	$db = new PDO($dsn,username,password);
 	$db->query('set names utf8;');
 	$action = $_GET['action'];
 	call_user_func($action);
