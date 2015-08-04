@@ -3,7 +3,7 @@
 	<title>Vue Demo</title>
 	<style type="text/css">
 	.content {
-		width:60%;
+		width:80%;
 		margin:0 auto;
     margin-bottom:20px;
 	}
@@ -47,10 +47,10 @@
 
 <script src="js/vue.min.js"></script>
 <script type="text/javascript">
-var selectURL = 'http://10.0.0.141/vue-demo/data.php';
+var selectURL = 'http://localhost/vue-demo/data.php';
 var request = new XMLHttpRequest();
 var data;
-request.open("GET","data.php?t=" + Math.random() + "",true);
+request.open("GET","data.php?action=select&t=" + Math.random() + "",true);
 request.send();
 request.onload = function(){
   data = JSON.parse(request.responseText);
@@ -68,19 +68,28 @@ function vue(){
         e.preventDefault();
         console.log(this);
         this.formData.push({
+            id:"",
             msg: "",
             checked: "",
-            picked: "",
             selected : "",
             multiSelect: ""
         })
       },
       remove:function(e){
+        if(e.$data.id!=""){
+          var remove = new XMLHttpRequest();
+          remove.open("GET","data.php?action=delete&id="+e.$data.id+"",true);
+          remove.send();
+        }
         this.formData.$remove(e.$data)
       },
       submit:function(){
         var result = JSON.stringify(demo.$data.formData);
-        alert(result);
+        result = "data="+result+"";
+        var submit = new XMLHttpRequest();
+        submit.open("POST","data.php?action=insert",true);
+        submit.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        submit.send(result);
       }
     }      
   });
